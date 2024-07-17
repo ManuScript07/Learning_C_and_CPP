@@ -1,6 +1,10 @@
 #include <stdio.h>
+ 
 int main(void)
 {
-    printf("dsdas");
+    int value = getchar();
+    int res = putchar(value);
+    printf("\n%d\n", res);
+ 
     return 0;
 }
