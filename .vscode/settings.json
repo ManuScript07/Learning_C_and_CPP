@@ -1,5 +1,5 @@
 {
-    "code-runner.runInTerminal": true,
+    "code-runner.runInTerminal": false,
     "code-runner.executorMap": {
 
         "javascript": "node",
@@ -62,6 +62,7 @@
     },
     "files.associations": {
         "*.c": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "math.h": "c"
     }
 }
