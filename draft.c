@@ -1,14 +1,17 @@
 #include <stdio.h>
-
-// здесь объявляйте макроопределение
-#define MUL_VAR_NAME(var1, var2) mul_##var1##_##var2
-int main(void)
-{
-    // здесь продолжайте программу
-    int a, b;
-    scanf("%d %d", &a, &b);
-    int MUL_VAR_NAME(a, b) = a*b;
-    printf("%d", MUL_VAR_NAME(a, b));
-    __ASSERT_TESTS__ // макроопределение для тестирования (не убирать и должно идти непосредственно перед return 0)
+#include <math.h>
+int main(void){
+    int m, n, k;
+    scanf("%d %d %d", &m, &n, &k);
+    double s = 0;
+    for(int i = 1; i <= m; ++i){
+        for(int j = 1; j <= n; ++j){
+            for(int t = 1; t <= k; ++t){
+                s += (double)(j*j)/(double)(pow(i+t, 3)-t);
+            }
+        }
+    }
+    s = s/(double)(n+m+k);
+    printf("%.4f", s);
     return 0;
 }
